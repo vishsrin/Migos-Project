@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class songGenerator {
+public class verseGenerator {
 	private ArrayList<String> lyrics;
 	private ArrayList<Double> adjectives;
 	private ArrayList<Double> adlibs;
@@ -16,7 +16,7 @@ public class songGenerator {
 	private ArrayList<Double> endlines;
 	private ArrayList<Double> endverses;
 	
-	public songGenerator(ArrayList<String> lyrics) throws Exception
+	public verseGenerator(ArrayList<String> lyrics) throws Exception
 	{
 		this.lyrics = lyrics;
 		lyricAnalyzer analyzer = new lyricAnalyzer(lyrics);
