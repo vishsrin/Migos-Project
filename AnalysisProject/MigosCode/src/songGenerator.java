@@ -31,6 +31,7 @@ public class songGenerator {
 		{
 			
 			title.add(chorus.get(0));
+			title.add("by migos"); 
 			title.add("endline");
 			return title;
 		}
@@ -40,6 +41,7 @@ public class songGenerator {
 			
 			title.add(chorus.get(0));
 			title.add(chorus.get(1));
+			title.add("by migos"); 
 			title.add("endline");
 			return title;
 		}
@@ -50,6 +52,7 @@ public class songGenerator {
 			title.add(chorus.get(0));
 			title.add(chorus.get(1));
 			title.add(chorus.get(2));
+			title.add("by migos"); 
 			title.add("endline");
 			return title;
 		}
@@ -62,6 +65,7 @@ public class songGenerator {
 				title.add(chorus.get(i));
 				title.add(chorus.get(i + 1));
 				title.add(chorus.get(i + 2));
+				title.add("by migos"); 
 				title.add("endline");
 				return title;
 			}
