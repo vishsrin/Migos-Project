@@ -11,36 +11,45 @@ public class songGenerator {
 	{
 		verseGenerator chorus = new verseGenerator(chorusLyrics);
 		this.chorus = chorus.generateVerse(30, 130);
+		verseConverter chorusConverter = new verseConverter(this.chorus);
+		this.chorus = chorusConverter.getConverted();
 		
 		title = getTitle();
 		
 		verseGenerator quavo = new verseGenerator(quavoLyrics);
-		this.quavo = quavo.generateVerse(70, 273);
+		this.quavo = quavo.generateVerse(70, 270);
+		verseConverter quavoConverter = new verseConverter(this.quavo);
+		this.quavo = quavoConverter.getConverted();
 		
 		verseGenerator offset = new verseGenerator(offsetLyrics);
-		this.offset = offset.generateVerse(70, 273);
+		this.offset = offset.generateVerse(30, 130);
+		verseConverter offsetConverter = new verseConverter(this.offset);
+		this.offset = offsetConverter.getConverted();
 		
 		verseGenerator takeoff = new verseGenerator(takeoffLyrics);
-		this.takeoff = takeoff.generateVerse(70, 273);
+		this.takeoff = takeoff.generateVerse(30, 130);
+		verseConverter takeoffConverter = new verseConverter(this.takeoff);
+		this.takeoff = takeoffConverter.getConverted();
 	}
+	
 	
 	public ArrayList<String> getTitle()
 	{
+		System.out.println("Chorus: " + chorus);
 		ArrayList<String> title = new ArrayList<String>();
-		if(chorus.get(0).equalsIgnoreCase("endline"))
-		{
-			
-			title.add(chorus.get(0));
-			title.add("by migos"); 
-			title.add("endline");
-			return title;
-		}
+//		if(chorus.get(0).equalsIgnoreCase("endline"))
+//		{
+//			
+//			title.add(chorus.get(0));
+//			title.add("by migos"); 
+//			title.add("endline");
+//			return title;
+//		}
 		
 		if(chorus.get(1).equalsIgnoreCase("endline"))
 		{
 			
 			title.add(chorus.get(0));
-			title.add(chorus.get(1));
 			title.add("by migos"); 
 			title.add("endline");
 			return title;
@@ -51,7 +60,6 @@ public class songGenerator {
 			
 			title.add(chorus.get(0));
 			title.add(chorus.get(1));
-			title.add(chorus.get(2));
 			title.add("by migos"); 
 			title.add("endline");
 			return title;
@@ -74,7 +82,7 @@ public class songGenerator {
 		return title;
 	}
 	
-	public void printSong()
+	public void printSong() throws Exception
 	{
 		ArrayList<String> song = getSong();
 		
@@ -92,8 +100,9 @@ public class songGenerator {
 		
 	}
 	
-	public ArrayList<String> getSong()
+	public ArrayList<String> getSong() throws Exception
 	{
+		
 		ArrayList<String> song = new ArrayList<String>();
 		int titleLength = title.size();
 		int chorusLength = chorus.size();
@@ -122,6 +131,8 @@ public class songGenerator {
 			song.add(quavo.get(i));
 		}
 		
+		song.add("endline");
+		
 		for(int i = 0; i < chorusLength; i++)
 		{
 			song.add(chorus.get(i));
@@ -136,6 +147,8 @@ public class songGenerator {
 			song.add(offset.get(i));
 		}
 		
+		song.add("endline");
+		
 		for(int i = 0; i < chorusLength; i++)
 		{
 			song.add(chorus.get(i));
@@ -149,6 +162,8 @@ public class songGenerator {
 			
 			song.add(takeoff.get(i));
 		}
+		
+		song.add("endline");
 		
 		for(int i = 0; i < chorusLength; i++)
 		{

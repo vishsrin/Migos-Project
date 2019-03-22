@@ -15,6 +15,7 @@ public class verseGenerator {
 	private ArrayList<Double> verbs;
 	private ArrayList<Double> endlines;
 	private ArrayList<Double> endverses;
+	private POStoWord converter = new POStoWord();
 	
 	public verseGenerator(ArrayList<String> lyrics) throws Exception
 	{
@@ -44,29 +45,28 @@ public class verseGenerator {
 		endverses = analyzer.getRow(probMatrix, 12);
 	}
 	
-	public ArrayList<String> generateVerse(int lowestBound, int highestBound)
+	public ArrayList<String> generateVerse(int lowestBound, int highestBound) throws Exception
 	{
 		ArrayList<String> generatedChorus = new ArrayList<String>();
-		
 		int firstPOSnum = generatePOS(12);
-		String firstPOSname = getPOSname(firstPOSnum);
-		generatedChorus.add(firstPOSname);
+		String nextPOSname = getPOSname(firstPOSnum);
+		generatedChorus.add(nextPOSname);
 		
 		for(int i = 1;  getPOSnum(generatedChorus.get(i - 1)) < 12; i++)
 		{
 			String lastPOSname = generatedChorus.get(i - 1);
 			int lastPOSnum = getPOSnum(lastPOSname);
 			int nextPOSnum = generatePOS(lastPOSnum);
-			String nextPOSname = getPOSname(nextPOSnum);
+			nextPOSname = getPOSname(nextPOSnum);
 			generatedChorus.add(nextPOSname);
 		}
 		
-		if(generatedChorus.size() > highestBound || generatedChorus.size() < lowestBound)
-		{
-			return generateVerse(lowestBound, highestBound);
-		}
+//		if(generatedChorus.size() > lowestBound || generatedChorus.size() < highestBound)
+//		{
+		//	return generateVerse(lowestBound, highestBound);
+	//	}
 		
-		else
+	//	else
 		{
 		return generatedChorus;
 		}

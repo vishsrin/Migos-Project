@@ -5,23 +5,27 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		filetoArrayList chorusconverter = new filetoArrayList(
-				"/Users/vishnu/Desktop/AnalysisProject/Lyrics/Culture/0.Fulls/Chorus.txt");
+				"/Users/95024610/Desktop/AnalysisProject/Lyrics/Culture/0.Fulls/Chorus.txt");
 		ArrayList<String> chorus = chorusconverter.getArrayList();
 
 		filetoArrayList quavoconverter = new filetoArrayList(
-				"/Users/vishnu/Desktop/AnalysisProject/Lyrics/Culture/0.Fulls/Quavo.txt");
+				"/Users/95024610/Desktop/AnalysisProject/Lyrics/Culture/0.Fulls/Quavo.txt");
 		ArrayList<String> quavo = quavoconverter.getArrayList();
 
 		filetoArrayList offsetconverter = new filetoArrayList(
-				"/Users/vishnu/Desktop/AnalysisProject/Lyrics/Culture/0.Fulls/Offset.txt");
+				"/Users/95024610/Desktop/AnalysisProject/Lyrics/Culture/0.Fulls/Offset.txt");
 		ArrayList<String> offset = offsetconverter.getArrayList();
-
+		
 		filetoArrayList takeoffconverter = new filetoArrayList(
-				"/Users/vishnu/Desktop/AnalysisProject/Lyrics/Culture/0.Fulls/Takeoff.txt");
+				"/Users/95024610/Desktop/AnalysisProject/Lyrics/Culture/0.Fulls/Takeoff.txt");
 		ArrayList<String> takeoff = takeoffconverter.getArrayList();
+		
+//		POStoWord converter = new POStoWord();
+//		System.out.println(converter.getWord("noun"));
 		
 		songGenerator generator = new songGenerator(chorus, quavo, offset, takeoff);
 		generator.printSong();
+		
 
 //		verseGenerator Chorusgenerator = new verseGenerator(chorus);
 //

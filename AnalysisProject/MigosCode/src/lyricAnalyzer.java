@@ -23,27 +23,27 @@ public class lyricAnalyzer {
 	{
 		this.lyrics = lyrics;
 
-		filetoArrayList verbsconverter = new filetoArrayList("/Users/vishnu/Desktop/AnalysisProject/POS/Verbs.txt");
+		filetoArrayList verbsconverter = new filetoArrayList("/Users/95024610/Desktop/AnalysisProject/POS/Verbs.txt");
 		ArrayList<String> verbs = verbsconverter.getArrayList();
-		filetoArrayList nounsconverter = new filetoArrayList("/Users/vishnu/Desktop/AnalysisProject/POS/Nouns.txt");
+		filetoArrayList nounsconverter = new filetoArrayList("/Users/95024610/Desktop/AnalysisProject/POS/Nouns.txt");
 		ArrayList<String> nouns = nounsconverter.getArrayList();
-		filetoArrayList adjsconverter = new filetoArrayList("/Users/vishnu/Desktop/AnalysisProject/POS/Adjectives.txt");
+		filetoArrayList adjsconverter = new filetoArrayList("/Users/95024610/Desktop/AnalysisProject/POS/Adjectives.txt");
 		ArrayList<String> adjs = adjsconverter.getArrayList();
-		filetoArrayList advsconverter = new filetoArrayList("/Users/vishnu/Desktop/AnalysisProject/POS/Adverbs.txt");
+		filetoArrayList advsconverter = new filetoArrayList("/Users/95024610/Desktop/AnalysisProject/POS/Adverbs.txt");
 		ArrayList<String> adverbs = advsconverter.getArrayList();
-		filetoArrayList pronounsconverter = new filetoArrayList("/Users/vishnu/Desktop/AnalysisProject/POS/Pronouns.txt");
+		filetoArrayList pronounsconverter = new filetoArrayList("/Users/95024610/Desktop/AnalysisProject/POS/Pronouns.txt");
 		ArrayList<String> pronouns = pronounsconverter.getArrayList();
-		filetoArrayList prepsconverter = new filetoArrayList("/Users/vishnu/Desktop/AnalysisProject/POS/Prepositions.txt");
+		filetoArrayList prepsconverter = new filetoArrayList("/Users/95024610/Desktop/AnalysisProject/POS/Prepositions.txt");
 		ArrayList<String> prepositions = prepsconverter.getArrayList();
-		filetoArrayList conjconverter = new filetoArrayList("/Users/vishnu/Desktop/AnalysisProject/POS/Conjunctions.txt");
+		filetoArrayList conjconverter = new filetoArrayList("/Users/95024610/Desktop/AnalysisProject/POS/Conjunctions.txt");
 		ArrayList<String> conjunctions = conjconverter.getArrayList();
-		filetoArrayList propernounsconverter = new filetoArrayList("/Users/vishnu/Desktop/AnalysisProject/POS/Propernouns.txt");
+		filetoArrayList propernounsconverter = new filetoArrayList("/Users/95024610/Desktop/AnalysisProject/POS/Propernouns.txt");
 		ArrayList<String> propernouns = propernounsconverter.getArrayList();
-		filetoArrayList artsconverter = new filetoArrayList("/Users/vishnu/Desktop/AnalysisProject/POS/Articles.txt");
+		filetoArrayList artsconverter = new filetoArrayList("/Users/95024610/Desktop/AnalysisProject/POS/Articles.txt");
 		ArrayList<String> articles = artsconverter.getArrayList();
-		filetoArrayList adlsconverter = new filetoArrayList("/Users/vishnu/Desktop/AnalysisProject/POS/Adlibs.txt");
+		filetoArrayList adlsconverter = new filetoArrayList("/Users/95024610/Desktop/AnalysisProject/POS/Adlibs.txt");
 		ArrayList<String> adlibs = adlsconverter.getArrayList();
-		filetoArrayList negsconverter = new filetoArrayList("/Users/vishnu/Desktop/AnalysisProject/POS/Negatives.txt");
+		filetoArrayList negsconverter = new filetoArrayList("/Users/95024610/Desktop/AnalysisProject/POS/Negatives.txt");
 		ArrayList<String> negatives = negsconverter.getArrayList();
 		
 		adjectives = adjs;
