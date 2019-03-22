@@ -22,12 +22,12 @@ public class songGenerator {
 		this.quavo = quavoConverter.getConverted();
 
 		verseGenerator offset = new verseGenerator(offsetLyrics);
-		this.offset = offset.generateVerse(30, 130);
+		this.offset = offset.generateVerse(70, 130);
 		verseConverter offsetConverter = new verseConverter(this.offset, "Offset");
 		this.offset = offsetConverter.getConverted();
 
 		verseGenerator takeoff = new verseGenerator(takeoffLyrics);
-		this.takeoff = takeoff.generateVerse(30, 130);
+		this.takeoff = takeoff.generateVerse(70, 130);
 		verseConverter takeoffConverter = new verseConverter(this.takeoff, "Takeoff");
 		this.takeoff = takeoffConverter.getConverted();
 	}
@@ -77,8 +77,8 @@ public class songGenerator {
 
 	public void printSong() throws Exception {
 		ArrayList<String> song = getSong();
-		songCleaner kidzBop = new songCleaner(song);
-		song = kidzBop.getCleanVersion();
+//		songCleaner kidzBop = new songCleaner(song);
+//		song = kidzBop.getCleanVersion();
 
 		for (int i = 0; i < song.size(); i++) {
 			if (song.get(i).equalsIgnoreCase("endline") || song.get(i).equalsIgnoreCase("endverse")) {
