@@ -27,7 +27,6 @@ public class Main {
 		
 //		POStoWord converter = new POStoWord();
 //		System.out.println(converter.getWord("noun"));
-//		
 		songGenerator generator = new songGenerator(chorus, quavo, offset, takeoff);
 		generator.printSong();
 		

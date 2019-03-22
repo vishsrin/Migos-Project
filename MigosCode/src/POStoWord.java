@@ -16,7 +16,7 @@ public class POStoWord {
 
 	public POStoWord(String whom) throws Exception {
 		adjectives = (new filetoArrayList(path + whom + "/" + "Adjectives.txt")).getArrayList();
-//		adlibs = (new filetoArrayList(path + whom + "/" +  "Adlibs.txt")).getArrayList();
+		adlibs = (new filetoArrayList(path +  "Adlibs.txt")).getArrayList();
 		adverbs = (new filetoArrayList(path + whom + "/" +  "Adverbs.txt")).getArrayList();
 		articles = (new filetoArrayList(path + whom + "/" +  "Articles.txt")).getArrayList();
 		conjunctions = (new filetoArrayList(path + whom + "/" +  "Conjunctions.txt")).getArrayList();
@@ -36,8 +36,7 @@ public class POStoWord {
 		case "adverb":
 			return adverbs.get((int) (Math.random() * adverbs.size()));
 		case "adlib":
-			return "adlib";
-//			return adlibs.get((int) (Math.random() * adlibs.size()));
+			return adlibs.get((int) (Math.random() * adlibs.size()));
 		case "preposition":
 			return prepositions.get((int) (Math.random() * prepositions.size()));
 		case "article":

@@ -110,6 +110,8 @@ public class songGenerator {
 		for (int i = 0; i < chorusLength; i++) {
 			song.add(chorus.get(i));
 		}
+		song.add("endline");
+		song.add("Quavo: ");
 
 		song.add("endline");
 
@@ -123,7 +125,9 @@ public class songGenerator {
 		for (int i = 0; i < chorusLength; i++) {
 			song.add(chorus.get(i));
 		}
-
+		
+		song.add("endline");
+		song.add("Takeoff: ");
 		song.add("endline");
 
 		for (int i = 0; i < takeoffLength; i++) {
@@ -136,7 +140,9 @@ public class songGenerator {
 		for (int i = 0; i < chorusLength; i++) {
 			song.add(chorus.get(i));
 		}
-
+		
+		song.add("endline");
+		song.add("Offset: ");
 		song.add("endline");
 
 		for (int i = 0; i < offsetLength; i++) {
