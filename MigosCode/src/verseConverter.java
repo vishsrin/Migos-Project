@@ -41,7 +41,7 @@ public class verseConverter {
 			return word;
 		}
 		
-		if(lyrics.get(i - 1).equalsIgnoreCase("adlib"))
+		if(lyrics.get(i - 1).equalsIgnoreCase("endline"))
 		{
 			String word = converter.getWord("adlib");
 
