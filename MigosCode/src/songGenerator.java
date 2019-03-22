@@ -77,6 +77,8 @@ public class songGenerator {
 
 	public void printSong() throws Exception {
 		ArrayList<String> song = getSong();
+		songCleaner kidzBop = new songCleaner(song);
+		song = kidzBop.getCleanVersion();
 
 		for (int i = 0; i < song.size(); i++) {
 			if (song.get(i).equalsIgnoreCase("endline") || song.get(i).equalsIgnoreCase("endverse")) {
